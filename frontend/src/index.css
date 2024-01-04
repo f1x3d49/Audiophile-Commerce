@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h1 {
+  @apply font-[700] text-[56px] uppercase leading-[58px] tracking-[2px];
+}
+.h2 {
+  @apply font-[700] text-[40px] uppercase leading-[44px] tracking-[1.5px];
+}
+.h3 {
+  @apply font-[700] text-[32px] uppercase leading-[36px] tracking-[1.15px];
+}
+.h4 {
+  @apply font-[700] text-[28px] uppercase leading-[38px] tracking-[2px];
+}
+.h5 {
+  @apply font-[700] text-[24px] uppercase leading-[33px] tracking-[1.7px];
+}
+.h6 {
+  @apply font-[700] text-[18px] uppercase leading-[24px] tracking-[1.3px];
+}
+.toverline {
+  @apply font-[400] text-[14px] uppercase leading-[19px] tracking-[10px];
+}
+.sub-title {
+  @apply font-[700] text-[13px] uppercase leading-[25px] tracking-[1px];
+}
+.body {
+  @apply font-[500] text-[15px] leading-[25px];
+}
