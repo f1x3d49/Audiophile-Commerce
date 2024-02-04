@@ -1,15 +1,24 @@
 const express = require("express");
-const app = express();
-const expressLayouts = require("express-ejs-layouts");
+const cors = require("cors");
+require("dotenv").config({ path: __dirname + "/.env" });
 
-const indexRouter = require("./routes/index");
+//Database Connection
+const connectDB = require("./mongodb");
+
+// Routes
+const homeRouter = require("./routes/home");
+
+const app = express();
+
+connectDB();
 
 app.set("view engine", "ejs");
-app.set("views", __dirname + "/views");
-app.set("layout", "layouts/layout");
-app.use(expressLayouts);
+app.use(express.json());
+app.use(cors());
 app.use(express.static("public"));
 
-app.use("/", indexRouter);
+app.use("/", homeRouter);
 
-app.listen(process.env.URL_PORT || 3000);
+app.listen(process.env.PORT, () =>
+  console.log("Listening on port " + process.env.PORT)
+);
