@@ -15,6 +15,16 @@ module.exports = {
       fontFamily: {
         primary: ["Manrope", "sans-serif"],
       },
+      screens: {
+        mb: "375px",
+        tb: "768px",
+        dt: "1440px",
+      },
+      backgroundImage: {
+        mobileHero: "url('./assets/home/mobile/image-header.jpg')",
+        tabletHero: "url('./assets/home/tablet/image-header.jpg')",
+        desktopHero: "url('./assets/home/desktop/image-hero.jpg')",
+      },
     },
   },
   plugins: [require("@tailwindcss/forms")],
