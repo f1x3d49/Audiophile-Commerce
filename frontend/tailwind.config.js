@@ -11,6 +11,7 @@ module.exports = {
         color5: "#fbaf85",
         color6: "#FFFFFF",
         color7: "#000000",
+        border: "rgba(151,151,151,100)",
       },
       fontFamily: {
         primary: ["Manrope", "sans-serif"],
