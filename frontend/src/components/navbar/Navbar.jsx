@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // asset imports
 import logo from "../../assets/shared/desktop/logo.svg";
 import { ReactComponent as Hamburger } from "../../assets/shared/tablet/icon-hamburger.svg";
 import { ReactComponent as CheckoutCart } from "../../assets/shared/desktop/icon-cart.svg";
+import Slider from "./Slider";
 
 const Navbar = ({ background }) => {
-  const [isOpen, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    console.log(open);
+  });
+
   return (
     <nav
       className={`h-[5rem] td:h-[6rem] w-full flex shrink-0 justify-between items-center  bg-${background} `}
@@ -16,14 +22,14 @@ const Navbar = ({ background }) => {
         {/* Container for the logo and hamburger button */}
         <div className="hidden tb:flex items-center justify-between w-1/3 tb:w-auto gap-8">
           {/* Hamburger Button */}
-          <button className="dt:hidden">
+          <button className="dt:hidden" onClick={() => setOpen(true)}>
             <Hamburger />
           </button>
           <img src={logo} alt="Company Logo" />
         </div>
 
         {/* New Hamburger and logo for mobile version */}
-        <button className="tb:hidden">
+        <button className="tb:hidden" onClick={() => setOpen(true)}>
           <Hamburger />
         </button>
 
@@ -47,9 +53,10 @@ const Navbar = ({ background }) => {
           </li>
         </ul>
         {/* Checkout Button */}
-        <button onClick={() => setOpen(true)}>
+        <button>
           <CheckoutCart />
         </button>
+        <Slider open={open} setOpen={setOpen} />
       </div>
     </nav>
   );
