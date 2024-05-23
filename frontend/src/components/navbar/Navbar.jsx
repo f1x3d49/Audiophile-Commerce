@@ -6,6 +6,9 @@ import { ReactComponent as Hamburger } from "../../assets/shared/tablet/icon-ham
 import { ReactComponent as CheckoutCart } from "../../assets/shared/desktop/icon-cart.svg";
 import Slider from "./Slider";
 
+//React Router Imports
+import { Link } from "react-router-dom";
+
 const Navbar = ({ background }) => {
   const [open, setOpen] = useState(false);
 
@@ -40,16 +43,24 @@ const Navbar = ({ background }) => {
         {/* Desktop Navigation Buttons */}
         <ul className="hidden dt:flex justify-between items-center gap-8 text-color6">
           <li>
-            <button className="sub-title hover:text-color1">Home</button>
+            <button className="sub-title hover:text-color1">
+              <Link to="/">Home</Link>
+            </button>
           </li>
           <li>
-            <button className="sub-title hover:text-color1">Headphones</button>
+            <button className="sub-title hover:text-color1">
+              <Link to="/headphones">Headphones</Link>
+            </button>
           </li>
           <li>
-            <button className="sub-title hover:text-color1">Speakers</button>
+            <button className="sub-title hover:text-color1">
+              <Link to="/speakers">Speakers</Link>
+            </button>
           </li>
           <li>
-            <button className="sub-title hover:text-color1">Earphones</button>
+            <button className="sub-title hover:text-color1">
+              <Link to="/earphones">Earphones</Link>
+            </button>
           </li>
         </ul>
         {/* Checkout Button */}
