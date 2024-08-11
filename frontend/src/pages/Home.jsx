@@ -23,7 +23,7 @@ const Home = () => {
         </div>
       </section>
       {/* Second section */}
-      <section className="w-full h-full px-6 py-12 flex items-center justify-center bg-color6">
+      <section className="w-full h-full dt:py-48 px-6 py-12 flex items-center justify-center bg-color6">
         <ThreeButtonComponent />
       </section>
     </div>

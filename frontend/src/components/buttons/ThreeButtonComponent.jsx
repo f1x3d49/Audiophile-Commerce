@@ -8,6 +8,9 @@ import headphonesthumbnail from "../../assets/shared/desktop/image-category-thum
 import earphonethumbnail from "../../assets/shared/desktop/image-category-thumbnail-earphones.png";
 import speakerthumbnail from "../../assets/shared/desktop/image-category-thumbnail-speakers.png";
 
+// React Router Imports
+import { Link } from "react-router-dom";
+
 const ThreeButtonComponent = () => {
   return (
     <div className="flex flex-col tb:flex-row justify-center items-center tb:gap-8  h-full w-full">
@@ -19,7 +22,7 @@ const ThreeButtonComponent = () => {
           </h1>
           <div className="flex items-center justify-center gap-2">
             <p className="sub-title text-color7 opacity-50 group-hover:text-color1 group-hover:opacity-100">
-              Shop
+              <Link to="/headphones">Shop</Link>
             </p>
             <ArrowR />
           </div>
@@ -38,7 +41,7 @@ const ThreeButtonComponent = () => {
           </h1>
           <div className="flex items-center justify-center gap-2">
             <p className="sub-title text-color7 opacity-50 group-hover:text-color1 group-hover:opacity-100">
-              Shop
+              <Link to="/speakers">Shop</Link>
             </p>
             <ArrowR />
           </div>
@@ -57,7 +60,7 @@ const ThreeButtonComponent = () => {
           </h1>
           <div className="flex items-center justify-center gap-2">
             <p className="sub-title text-color7 opacity-50 group-hover:text-color1 group-hover:opacity-100">
-              Shop
+              <Link to="/earphones">Shop</Link>
             </p>
             <ArrowR />
           </div>
