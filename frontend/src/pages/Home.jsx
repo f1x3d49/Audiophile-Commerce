@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Button1 from "../components/buttons/Button1";
 import ThreeButtonComponent from "../components/buttons/ThreeButtonComponent";
+import OrangeSpeaker from "../components/misc/OrangeSpeaker";
 
 const Home = () => {
   return (
@@ -23,8 +24,12 @@ const Home = () => {
         </div>
       </section>
       {/* Second section */}
-      <section className="w-full h-full dt:py-48 px-6 py-12 flex items-center justify-center bg-color6">
+      <section className="w-full h-full dt:py-48 px-6 dt:px-12 py-12 flex items-center justify-center bg-color6">
         <ThreeButtonComponent />
+      </section>
+      {/* Third Section */}
+      <section className="w-full h-full px-6 dt:px-12 flex flex-col items-center justify-center">
+        <OrangeSpeaker />
       </section>
     </div>
   );
